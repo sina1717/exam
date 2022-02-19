@@ -1,6 +1,7 @@
 package service;
 
 import Entity.Comment;
+import Entity.Post;
 import repository.CommentRepository;
 
 import java.util.List;
@@ -35,5 +36,9 @@ public class CommentService implements BaseService<Comment> {
     @Override
     public List<Comment> findAll() {
         return commentRepository.findAll();
+    }
+
+    public List<Comment> findCommentByPost(Post post){
+        return commentRepository.findCommentByPost(post);
     }
 }

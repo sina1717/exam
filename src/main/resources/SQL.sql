@@ -19,4 +19,3 @@ create table if not exists comment(
     constraint ac_cm_fk foreign key (account_id) references account(id),
     constraint po_cm_fk foreign key (post_id) references posts(id)
 );
-insert into comment(account_id, post_id, description) VALUES (?,?,?);
